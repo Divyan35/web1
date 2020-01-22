@@ -14,8 +14,8 @@
   <a class="item" routerLink="home" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Home</a>
   <a class="item" routerLink="who-we-are" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Who We Are</a>
   <a class="item" routerLink="what-we-do" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">What We Do</a>
-  <a class="item" routerLink="join-our-team" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Join Our Team</a>
-  <a class="item" routerLink="contact" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Contact Us</a>
+  <a class="item" *ngIf="isHomeRouteActivated()" routerLink="join-our-team" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Join Our Team</a>
+  <a class="item" *ngIf="router.url === '/who-we-are'" routerLink="contact" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Contact Us</a>
 </div>
 
 <!--<div class="ui visible left sidebar inverted vertical menu" style="margin-top:64px !important;display:block; width: 240px; height:91% !important;">
